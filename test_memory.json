@@ -1,0 +1,72 @@
+{
+  "history": [
+    {
+      "command": "Check emails",
+      "action": "browse",
+      "result": "completed",
+      "notes": "first"
+    },
+    {
+      "command": "Download a report",
+      "action": "download",
+      "result": "completed",
+      "notes": "second"
+    },
+    {
+      "command": "Check emails",
+      "action": "browse",
+      "result": "completed",
+      "notes": "first"
+    },
+    {
+      "command": "Download a report",
+      "action": "download",
+      "result": "completed",
+      "notes": "second"
+    },
+    {
+      "command": "Check emails",
+      "action": "browse",
+      "result": "completed",
+      "notes": "first"
+    },
+    {
+      "command": "Download a report",
+      "action": "download",
+      "result": "completed",
+      "notes": "second"
+    },
+    {
+      "command": "Check emails",
+      "action": "browse",
+      "result": "completed",
+      "notes": "first"
+    },
+    {
+      "command": "Download a report",
+      "action": "download",
+      "result": "completed",
+      "notes": "second"
+    }
+  ],
+  "preferences": {
+    "browse": {
+      "count": 4,
+      "commands": [
+        "Check emails",
+        "Check emails",
+        "Check emails",
+        "Check emails"
+      ]
+    },
+    "download": {
+      "count": 4,
+      "commands": [
+        "Download a report",
+        "Download a report",
+        "Download a report",
+        "Download a report"
+      ]
+    }
+  }
+}

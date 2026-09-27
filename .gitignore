@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+approved_domains.json
+.agent_memory.json
+.sessions/
+downloads/
