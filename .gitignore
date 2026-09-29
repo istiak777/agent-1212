@@ -6,3 +6,4 @@ approved_domains.json
 .agent_memory.json
 .sessions/
 downloads/
+last_output.txt

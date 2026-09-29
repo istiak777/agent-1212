@@ -1,3 +1,6 @@
 {
-    "window.title": "Our agent 1"
+    "window.title": "Our agent 1",
+    "workbench.preferredHighContrastLightColorTheme": "Visual Studio Light - C++",
+    "workbench.preferredLightColorTheme": "Kimbie Dark",
+    "window.autoDetectColorScheme": true
 }
