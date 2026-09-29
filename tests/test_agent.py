@@ -47,9 +47,28 @@ class AgentBehaviorTests(unittest.TestCase):
             )
         )
 
-        self.assertIn("Complete the user request directly", model.last_prompt)
+        self.assertIn("Keep the answer concise, factual, and aligned with the request.", model.last_prompt)
+        self.assertIn("Start with a SOURCE line", model.last_prompt)
         self.assertNotIn("SHORT EXPLANATION:", model.last_prompt)
         self.assertNotIn("HASHTAGS:", model.last_prompt)
+
+    def test_writeup_request_uses_aligned_content_package(self):
+        model = FakeModel()
+        agent = ResearchAgent(toolkit=FakeToolkit(), model=model)
+
+        import asyncio
+
+        asyncio.run(
+            agent.answer(
+                "https://example.com",
+                request="Draft a social media writeup with hashtags from this page",
+            )
+        )
+
+        self.assertIn("SHORT EXPLANATION:", model.last_prompt)
+        self.assertIn("HASHTAGS:", model.last_prompt)
+        self.assertIn("SOURCE:", model.last_prompt)
+        self.assertIn("https://example.com", model.last_prompt)
 
     def test_command_router_requires_permission_for_sensitive_actions(self):
         agent = ResearchAgent(toolkit=FakeToolkit(), model=FakeModel())

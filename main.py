@@ -3,6 +3,7 @@ import asyncio
 import json
 
 from agent import ResearchAgent
+from output_display import present_result
 
 
 def parse_args():
@@ -108,9 +109,7 @@ async def run(args):
         else:
             print(f"\nStatus: {result['status']}")
             print(f"Action: {result['action']}")
-            if result.get("source"):
-                print(f"Source: {result['source']}")
-            print(f"\nResult:\n{result.get('result', '')}")
+            present_result(result, interactive=not args.json)
 
 
 if __name__ == "__main__":
